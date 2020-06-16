@@ -1,7 +1,7 @@
 {
   "name": "chat-indicators",
   "title": "Chat Message Accessibility Indicators",
-  "description": "Adds a textual tag to chat messages to easily identify whether the message is a whisper, blind roll, or self roll.",
+  "description": "Adds a textual tag to chat messages to easily identify whether the message is a whisper, blind roll, or self roll. Additionally, makes it easier to identify the participants in a whisper.",
   "version": "1.0.0",
   "author": "Cole Schultz (cole#9640)",
   "languages": [
