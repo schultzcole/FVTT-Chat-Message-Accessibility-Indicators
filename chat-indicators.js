@@ -37,18 +37,27 @@ function injectMessageTag(html, messageData) {
 function injectWhisperParticipants(html, messageData) {
     const alias = messageData.alias;
     const whisperTargetString = messageData.whisperTo;
-    const isWhisper = messageData.message.whisper?.length > 0 || false;
+    const whisperTargetIds = messageData.message.whisper;
+    const isWhisper = whisperTargetIds?.length > 0 || false;
+    const isRoll = messageData.message.roll !== undefined;
+
+    const authorId = messageData.message.user;
+    const userId = game.user.data._id;
 
     if (!isWhisper) return;
+    if (userId !== authorId && !whisperTargetIds.includes(userId) ) return;
 
     // remove the old whisper to content, if it exists
     html.find(".whisper-to").detach();
+
+    // if this is a roll
+    if (isRoll) return;
 
     // add new content
     const messageHeader = html.find(".message-header");
 
     const whisperParticipants = $("<span>");
-    whisperParticipants.addClass("whisper-to flexrow");
+    whisperParticipants.addClass("whisper-to");
     
     const whisperFrom = $("<span>");
     whisperFrom.text(`${game.i18n.localize("chat-indicators.From")}: ${alias}`);

@@ -8,6 +8,16 @@
     background: rgba(0, 0, 0, 0.05);
 }
 
+.whisper-to * {
+    display: inline-block;
+    margin: 1px 3px 1px 0;
+    padding: 0 3px;
+    line-height: 1rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
 #chat-log .message .message-header {
     justify-content: space-between;
 }
@@ -19,4 +29,9 @@
 
 #chat-log .message .message-header .message-sender {
     flex: 1 0 1px;
+}
+
+#chat-log .message .message-header .whisper-to {
+    line-height: 1rem;
+    margin-bottom: .5rem;
 }
