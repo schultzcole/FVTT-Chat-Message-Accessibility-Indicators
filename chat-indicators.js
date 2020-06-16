@@ -1,8 +1,6 @@
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     injectMessageTag(html, messageData);
     injectWhisperParticipants(html, messageData);
-
-    console.log(messageData);
 });
 
 function injectMessageTag(html, messageData) {
