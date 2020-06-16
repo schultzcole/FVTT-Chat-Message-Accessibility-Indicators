@@ -1,0 +1,22 @@
+.chat-mode-indicator {
+    display: inline-block;
+    margin: 0 3px 0 0;
+    padding: 0 3px;
+    line-height: 1rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#chat-log .message .message-header {
+    justify-content: space-between;
+}
+
+#chat-log .message .message-header .message-metadata {
+    flex: 0 0 auto;
+    margin-left: 1rem;
+}
+
+#chat-log .message .message-header .message-sender {
+    flex: 1 0 1px;
+}

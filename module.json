@@ -4,8 +4,18 @@
   "description": "Adds a textual tag to chat messages to easily identify whether the message is a whisper, blind roll, or self roll.",
   "version": "1.0.0",
   "author": "Cole Schultz (cole#9640)",
+  "languages": [
+      {
+          "lang": "en",
+          "name": "English",
+          "path": "lang/en.json"
+      }
+  ],
   "esmodules": [
     "chat-indicators.js"
+  ],
+  "styles": [
+    "chat-indicators.css"
   ],
   "minimumCoreVersion": "0.6.2",
   "compatibleCoreVersion": "0.6.2",
